@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sneha Jaiswal | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --cream: #fbf7ee;
+      --white: #fffaf4;
+      --brown: #34211e;
+      --pink: #c95f78;
+      --soft-pink: #f6d9df;
+      --green: #e6f0c9;
+      --blue: #dcecf4;
+      --purple: #e9def4;
+      --yellow: #fae8b3;
+      --border: #e8dbd0;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--brown);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ================= HEADER ================= */
+
+    header {
+      height: 66px;
+      padding: 0 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      background: rgba(251,247,238,0.95);
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    .logo span {
+      color: var(--pink);
+    }
+
+    .top-text {
+      margin-left: auto;
+      margin-right: 20px;
+
+      display: flex;
+      gap: 10px;
+
+      font-size: 10px;
+      letter-spacing: 1.5px;
+    }
+
+    .top-text b {
+      color: var(--pink);
+    }
+
+    /* THREE DOT BUTTON */
+
+    .menu-button {
+      width: 40px;
+      height: 40px;
+
+      border: none;
+      border-radius: 50%;
+
+      background: var(--soft-pink);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+
+      cursor: pointer;
+    }
+
+    .menu-button span {
+      width: 4px;
+      height: 4px;
+
+      background: var(--brown);
+      border-radius: 50%;
+    }
+
+    /* MENU */
+
+    .menu {
+      position: absolute;
+      right: 6%;
+      top: 58px;
+
+      width: 245px;
+
+      padding: 18px;
+
+      background: #fffaf3;
+
+      border: 1px solid var(--border);
+      border-radius: 14px;
+
+      box-shadow: 0 20px 45px rgba(70,40,30,0.13);
+
+      display: none;
+    }
+
+    .menu.active {
+      display: block;
+    }
+
+    .menu-title {
+      display: flex;
+      justify-content: space-between;
+
+      font-weight: 700;
+
+      padding-bottom: 10px;
+      margin-bottom: 7px;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .menu a {
+      display: block;
+
+      padding: 8px 0;
+
+      font-size: 12px;
+
+      transition: 0.2s;
+    }
+
+    .menu a:hover {
+      color: var(--pink);
+      padding-left: 5px;
+    }
+
+    .menu-social {
+      border-top: 1px solid var(--border);
+
+      margin-top: 10px;
+      padding-top: 10px;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      min-height: 445px;
+
+      padding: 50px 7% 35px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 30px;
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .hero-text {
+      padding-top: 20px;
+    }
+
+    .hello {
+      font-family: "Caveat", cursive;
+
+      font-size: 23px;
+
+      margin-bottom: 8px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(60px, 7vw, 90px);
+
+      line-height: 0.9;
+
+      letter-spacing: -4px;
+    }
+
+    .hero h1 span {
+      color: var(--pink);
+    }
+
+    .subtitle {
+      font-size: 14px;
+
+      margin-top: 23px;
+
+      max-width: 470px;
+    }
+
+    .subtitle span {
+      color: var(--pink);
+      padding: 0 4px;
+    }
+
+    /* SOCIAL */
+
+    .socials {
+      display: flex;
+      gap: 22px;
+
+      margin-top: 27px;
+    }
+
+    .social {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      gap: 5px;
+
+      font-size: 10px;
+    }
+
+    .social-icon {
+      width: 34px;
+      height: 34px;
+
+      border-radius: 50%;
+
+      display: grid;
+      place-items: center;
+
+      color: white;
+
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .linkedin {
+      background: #4b82a8;
+    }
+
+    .github {
+      background: #34211e;
+    }
+
+    .email {
+      background: #c96d82;
+    }
+
+    /* PHOTO */
+
+    .photo-area {
+      position: relative;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .pink-blob {
+      position: absolute;
+
+      width: 300px;
+      height: 230px;
+
+      background: #f4d5dc;
+
+      border-radius: 50%;
+
+      transform: rotate(-8deg);
+    }
+
+    .photo-frame {
+      width: 285px;
+      height: 305px;
+
+      border-radius: 45% 55% 50% 50%;
+
+      overflow: hidden;
+
+      position: relative;
+      z-index: 2;
+
+      border: 5px solid #fff7ef;
+
+      box-shadow: 0 10px 30px rgba(70,40,30,0.12);
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      object-position: center 28%;
+    }
+
+    .photo-note {
+      position: absolute;
+
+      right: 2%;
+      bottom: 8%;
+
+      font-family: "Caveat", cursive;
+
+      font-size: 19px;
+
+      transform: rotate(-5deg);
+    }
+
+    /* ================= STATS ================= */
+
+    .stats {
+      margin: 0 5.5% 30px;
+
+      padding: 18px 25px;
+
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      border-radius: 13px;
+
+      display: grid;
+
+      grid-template-columns: repeat(4,1fr);
+
+      box-shadow: 0 8px 25px rgba(60,40,30,0.05);
+    }
+
+    .stat {
+      display: flex;
+      align-items: center;
+
+      gap: 12px;
+
+      padding: 5px 18px;
+
+      border-right: 1px solid var(--border);
+    }
+
+    .stat:last-child {
+      border-right: none;
+    }
+
+    .stat-circle {
+      width: 32px;
+      height: 32px;
+
+      border-radius: 50%;
+
+      background: var(--soft-pink);
+
+      display: grid;
+      place-items: center;
+
+      font-size: 12px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 16px;
+    }
+
+    .stat small {
+      font-size: 9px;
+      color: #806d65;
+    }
+
+    /* ================= MAIN ================= */
+
+    .container {
+      width: 89%;
+
+      margin: auto;
+
+      border-top: 1px solid var(--border);
+    }
+
+    .section {
+      display: grid;
+
+      grid-template-columns: 210px 1fr;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-label {
+      padding-top: 35px;
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: 1.5px;
+
+      color: #806d65;
+    }
+
+    .section-content {
+      padding: 35px 0 60px;
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+
+      font-size: 42px;
+
+      line-height: 1.05;
+
+      margin-bottom: 20px;
+    }
+
+    h2 em {
+      color: var(--pink);
+      font-style: normal;
+    }
+
+    /* ABOUT */
+
+    .about p {
+      max-width: 650px;
+
+      font-size: 13px;
+
+      margin-bottom: 13px;
+    }
+
+    .handwritten {
+      margin-top: 25px;
+
+      font-family: "Caveat", cursive;
+
+      font-size: 22px;
+
+      color: #76933c;
+
+      transform: rotate(-3deg);
+    }
+
+    /* ================= SKILLS ================= */
+
+    .skills-grid {
+      max-width: 700px;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 9px;
+    }
+
+    .skill {
+      min-height: 65px;
+
+      padding: 12px 15px;
+
+      border-radius: 13px;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+    }
+
+    .skill-icon {
+      width: 36px;
+      height: 36px;
+
+      background: rgba(255,255,255,0.65);
+
+      border-radius: 50%;
+
+      display: grid;
+      place-items: center;
+
+      font-weight: 700;
+    }
+
+    .skill b {
+      display: block;
+
+      font-size: 12px;
+    }
+
+    .skill small {
+      font-size: 9px;
+
+      color: #6f5e57;
+    }
+
+    .skill:nth-child(1) {
+      background: var(--blue);
+    }
+
+    .skill:nth-child(2) {
+      background: var(--green);
+    }
+
+    .skill:nth-child(3) {
+      background: var(--purple);
+    }
+
+    .skill:nth-child(4) {
+      background: var(--soft-pink);
+    }
+
+    .skill:nth-child(5) {
+      background: var(--yellow);
+    }
+
+    /* ================= PROJECTS ================= */
+
+    .project {
+      max-width: 750px;
+
+      display: grid;
+
+      grid-template-columns: 120px 1fr;
+
+      gap: 15px;
+
+      padding: 10px;
+
+      margin-bottom: 10px;
+
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      border-radius: 13px;
+    }
+
+    .project-image {
+      min-height: 105px;
+
+      border-radius: 9px;
+
+      display: grid;
+      place-items: center;
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 28px;
+    }
+
+    .fitness {
+      background: var(--green);
+    }
+
+    .tic {
+      background: var(--purple);
+    }
+
+    .fun {
+      background: var(--soft-pink);
+
+      font-family: "DM Sans", sans-serif;
+
+      font-size: 8px;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 5px;
+
+      padding: 12px;
+    }
+
+    .fun span {
+      background: #fffaf4;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 4px;
+
+      font-weight: 700;
+    }
+
+    .project-info {
+      padding: 7px;
+    }
+
+    .project-info b {
+      font-size: 13px;
+    }
+
+    .project-info p {
+      font-size: 10px;
+
+      margin: 6px 0;
+    }
+
+    .tag {
+      display: inline-block;
+
+      padding: 4px 7px;
+
+      margin-right: 4px;
+
+      border-radius: 10px;
+
+      background: #f0e6d7;
+
+      font-size: 7px;
+
+      font-weight: 700;
+    }
+
+    /* ================= EDUCATION ================= */
+
+    .timeline {
+      max-width: 750px;
+    }
+
+    .education-item {
+      display: grid;
+
+      grid-template-columns: 110px 1fr;
+
+      padding: 16px 0;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .education-year {
+      font-size: 8px;
+
+      font-weight: 700;
+    }
+
+    .education-item b {
+      font-size: 13px;
+    }
+
+    .education-item p {
+      font-size: 10px;
+
+      color: #786760;
+    }
+
+    /* ================= SIH ================= */
+
+    .sih-card {
+      max-width: 750px;
+
+      padding: 25px;
+
+      background: #f2e2ec;
+
+      border: 1px solid #ead5df;
+
+      border-radius: 14px;
+
+      position: relative;
+    }
+
+    .sih-top {
+      display: flex;
+
+      justify-content: space-between;
+
+      font-size: 8px;
+
+      letter-spacing: 1px;
+    }
+
+    .sih-card h3 {
+      font-family: "Playfair Display", serif;
+
+      font-size: 24px;
+
+      margin: 23px 0 8px;
+    }
+
+    .sih-card p {
+      max-width: 620px;
+
+      font-size: 11px;
+    }
+
+    .sih-circle {
+      position: absolute;
+
+      right: 25px;
+      bottom: 20px;
+
+      width: 55px;
+      height: 55px;
+
+      border-radius: 50%;
+
+      border: 2px solid var(--pink);
+
+      color: var(--pink);
+
+      display: grid;
+      place-items: center;
+
+      font-weight: 700;
+
+      transform: rotate(8deg);
+    }
+
+    /* ================= FOSS ================= */
+
+    .foss-box {
+      max-width: 750px;
+
+      padding: 30px;
+
+      border-radius: 14px;
+
+      background: #edf0dc;
+    }
+
+    .foss-box p {
+      font-size: 11px;
+
+      max-width: 620px;
+
+      margin-bottom: 15px;
+    }
+
+    .foss-tags span {
+      display: inline-block;
+
+      padding: 5px 9px;
+
+      margin-right: 5px;
+
+      border-radius: 10px;
+
+      background: var(--yellow);
+
+      font-size: 7px;
+
+      font-weight: 700;
+    }
+
+    /* ================= CONTACT ================= */
+
+    .contact {
+      position: relative;
+    }
+
+    .email-big {
+      display: inline-block;
+
+      font-size: 15px;
+
+      border-bottom: 2px solid var(--brown);
+
+      padding-bottom: 4px;
+    }
+
+    .contact-links {
+      display: flex;
+
+      gap: 7px;
+
+      margin-top: 20px;
+    }
+
+    .contact-links a {
+      padding: 8px 12px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 9px;
+
+      background: var(--white);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      transition: 0.2s;
+    }
+
+    .contact-links a:hover {
+      background: var(--soft-pink);
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      padding: 17px 6%;
+
+      border-top: 1px solid var(--border);
+
+      display: flex;
+
+      justify-content: space-between;
+
+      font-size: 8px;
+
+      color: #806d65;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media(max-width: 800px) {
+
+      .top-text {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+      }
+
+      .socials {
+        justify-content: center;
+      }
+
+      .photo-area {
+        min-height: 350px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stat {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .section {
+        grid-template-columns: 1fr;
+      }
+
+      .section-label {
+        padding-top: 30px;
+      }
+
+      .section-content {
+        padding-top: 15px;
+      }
+
+    }
+
+    @media(max-width: 550px) {
+
+      .hero h1 {
+        font-size: 58px;
+      }
+
+      .photo-frame {
+        width: 245px;
+        height: 270px;
+      }
+
+      .pink-blob {
+        width: 255px;
+        height: 210px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .stats .stat {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project {
+        grid-template-columns: 90px 1fr;
+      }
+
+      h2 {
+        font-size: 34px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 7px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+  <a href="#home" class="logo">
+    SJ <span>♥</span>
+  </a>
+
+  <div class="top-text">
+    <span>ECE</span>
+    <b>+</b>
+    <span>IIIT KALYANI</span>
+  </div>
+
+  <!-- THREE DOTS -->
+
+  <button class="menu-button" id="menuButton">
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </button>
+
+  <!-- MENU -->
+
+  <nav class="menu" id="menu">
+
+    <div class="menu-title">
+      Explore
+      <span>×</span>
+    </div>
+
+    <a href="#home">01 &nbsp; Home</a>
+
+    <a href="#about">02 &nbsp; About</a>
+
+    <a href="#skills">03 &nbsp; Skills</a>
+
+    <a href="#projects">04 &nbsp; Projects</a>
+
+    <a href="#education">05 &nbsp; Education</a>
+
+    <a href="#experience">06 &nbsp; Experience</a>
+
+    <a href="#foss">07 &nbsp; FOSS</a>
+
+    <a href="#contact">08 &nbsp; Contact</a>
+
+    <div class="menu-social">
+
+      <a href="https://github.com/snehajaiswal0854-ux"
+         target="_blank">
+        GitHub ↗
+      </a>
+
+      <a href="https://www.linkedin.com/in/sneha-j-6964663a0"
+         target="_blank">
+        LinkedIn ↗
+      </a>
+
+      <a href="mailto:snehajaiswal0854@gmail.com">
+        Email ↗
+      </a>
+
+    </div>
+
+  </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+  <div class="hero-text">
+
+    <div class="hello">
+      Hi there! ♡
+    </div>
+
+    <h1>
+      Sneha<br>
+      <span>Jaiswal.</span>
+    </h1>
+
+    <p class="subtitle">
+
+      Electronics & Communication Engineering Student
+
+      <span>|</span>
+
+      Builder
+
+      <span>|</span>
+
+      Problem Solver
+
+    </p>
+
+
+    <!-- SOCIAL LINKS -->
+
+    <div class="socials">
+
+      <a
+        class="social"
+        href="https://www.linkedin.com/in/sneha-j-6964663a0"
+        target="_blank"
+      >
+
+        <div class="social-icon linkedin">
+          in
+        </div>
+
+        LinkedIn
+
+      </a>
+
+
+      <a
+        class="social"
+        href="https://github.com/snehajaiswal0854-ux"
+        target="_blank"
+      >
+
+        <div class="social-icon github">
+          ●
+        </div>
+
+        GitHub
+
+      </a>
+
+
+      <a
+        class="social"
+        href="mailto:snehajaiswal0854@gmail.com"
+      >
+
+        <div class="social-icon email">
+          ✉
+        </div>
+
+        Email
+
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- PHOTO -->
+
+  <div class="photo-area">
+
+    <div class="pink-blob"></div>
+
+    <div class="photo-frame">
+
+      <img
+        src="images/sneha.jpg"
+        alt="Sneha Jaiswal"
+      >
+
+    </div>
+
+    <div class="photo-note">
+      learning<br>
+      by making ♡
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+
+  <div class="stat">
+
+    <div class="stat-circle">
+      🎓
+    </div>
+
+    <div>
+      <strong>7.5 / 10</strong>
+      <small>Current CGPA</small>
+    </div>
+
+  </div>
+
+
+  <div class="stat">
+
+    <div class="stat-circle">
+      ★
+    </div>
+
+    <div>
+      <strong>95.6%</strong>
+      <small>Class X</small>
+    </div>
+
+  </div>
+
+
+  <div class="stat">
+
+    <div class="stat-circle">
+      ★
+    </div>
+
+    <div>
+      <strong>81.6%</strong>
+      <small>Class XII</small>
+    </div>
+
+  </div>
+
+
+  <div class="stat">
+
+    <div class="stat-circle">
+      ↗
+    </div>
+
+    <div>
+      <strong>91.46</strong>
+      <small>JEE Main Percentile</small>
+    </div>
+
+  </div>
+
+</section>
+
+
+<main class="container">
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section" id="about">
+
+  <div class="section-label">
+    02 / ABOUT
+  </div>
+
+  <div class="section-content about">
+
+    <h2>
+      More than<br>
+      a <em>student.</em>
+    </h2>
+
+    <p>
+      I'm Sneha, an Electronics & Communication Engineering
+      student at IIIT Kalyani. I enjoy understanding how things
+      work and turning what I learn into something useful.
+    </p>
+
+    <p>
+      My interests include frontend development, C programming,
+      DSA, UI/UX design and problem solving. I'm learning,
+      experimenting and building one project at a time.
+    </p>
+
+    <div class="handwritten">
+      learning by making ♡
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section class="section" id="skills">
+
+  <div class="section-label">
+    03 / SKILLS
+  </div>
+
+  <div class="section-content">
+
+    <h2>
+      My <em>Toolbox.</em>
+    </h2>
+
+    <div class="skills-grid">
+
+      <div class="skill">
+
+        <div class="skill-icon">
+          &lt;/&gt;
+        </div>
+
+        <div>
+          <b>Frontend</b>
+          <small>HTML · CSS</small>
+        </div>
+
+      </div>
+
+
+      <div class="skill">
+
+        <div class="skill-icon">
+          C
+        </div>
+
+        <div>
+          <b>C Programming</b>
+          <small>Programming · Logic</small>
+        </div>
+
+      </div>
+
+
+      <div class="skill">
+
+        <div class="skill-icon">
+          ⌘
+        </div>
+
+        <div>
+          <b>DSA</b>
+          <small>Data Structures · Algorithms</small>
+        </div>
+
+      </div>
+
+
+      <div class="skill">
+
+        <div class="skill-icon">
+          ✎
+        </div>
+
+        <div>
+          <b>UI / UX Design</b>
+          <small>Visual Thinking · Design</small>
+        </div>
+
+      </div>
+
+
+      <div class="skill">
+
+        <div class="skill-icon">
+          ϟ
+        </div>
+
+        <div>
+          <b>Problem Solver</b>
+          <small>Break · Understand · Build</small>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section class="section" id="projects">
+
+  <div class="section-label">
+    04 / PROJECTS
+  </div>
+
+  <div class="section-content">
+
+    <h2>
+      Things I've<br>
+      been <em>building.</em>
+    </h2>
+
+
+    <!-- FITNESS -->
+
+    <article class="project">
+
+      <div class="project-image fitness">
+        ♡
+      </div>
+
+      <div class="project-info">
+
+        <b>
+          AI Fitness & Health
+        </b>
+
+        <p>
+          Team project exploring how AI can encourage fitness
+          activities and make food and health guidance more practical.
+        </p>
+
+        <span class="tag">AI</span>
+        <span class="tag">FITNESS</span>
+        <span class="tag">SIH</span>
+
+      </div>
+
+    </article>
+
+
+    <!-- TIC TAC TOE -->
+
+    <article class="project">
+
+      <div class="project-image tic">
+
+        ○ ×<br>
+        × ○
+
+      </div>
+
+      <div class="project-info">
+
+        <b>
+          Tic Tac Toe
+        </b>
+
+        <p>
+          A small game project built while practising
+          programming logic and problem solving.
+        </p>
+
+        <span class="tag">C</span>
+        <span class="tag">LOGIC</span>
+        <span class="tag">GAME</span>
+
+      </div>
+
+    </article>
+
+
+    <!-- ENTERTAINMENT -->
+
+    <article class="project">
+
+      <div class="project-image fun">
+
+        <span>PLAY</span>
+        <span>QUIZ</span>
+        <span>PUZZLE</span>
+        <span>FUN</span>
+
+      </div>
+
+      <div class="project-info">
+
+        <b>
+          Entertainment Website
+        </b>
+
+        <p>
+          Currently developing a fun interactive site with
+          games, puzzles, quizzes and creative content.
+        </p>
+
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">UI/UX</span>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section class="section" id="education">
+
+  <div class="section-label">
+    05 / EDUCATION
+  </div>
+
+  <div class="section-content">
+
+    <h2>
+      Academic <em>Journey.</em>
+    </h2>
+
+    <div class="timeline">
+
+
+      <div class="education-item">
+
+        <div class="education-year">
+          CURRENT
+        </div>
+
+        <div>
+
+          <b>
+            B.Tech — Electronics & Communication Engineering
+          </b>
+
+          <p>
+            IIIT Kalyani | CGPA 7.5 / 10
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="education-item">
+
+        <div class="education-year">
+          CLASS XII
+        </div>
+
+        <div>
+
+          <b>
+            Higher Secondary Education
+          </b>
+
+          <p>
+            81.6%
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="education-item">
+
+        <div class="education-year">
+          CLASS X
+        </div>
+
+        <div>
+
+          <b>
+            Secondary Education
+          </b>
+
+          <p>
+            95.6%
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="education-item">
+
+        <div class="education-year">
+          JEE MAIN
+        </div>
+
+        <div>
+
+          <b>
+            First attempt — 1st session
+          </b>
+
+          <p>
+            91.46 Percentile
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= EXPERIENCE ================= -->
+
+<section class="section" id="experience">
+
+  <div class="section-label">
+    06 / EXPERIENCE
+  </div>
+
+  <div class="section-content">
+
+    <h2>
+      Learning by <em>Doing.</em>
+    </h2>
+
+
+    <div class="sih-card">
+
+      <div class="sih-top">
+
+        <b>
+          SMART INDIA HACKATHON
+        </b>
+
+        <span>
+          TEAM PROJECT
+        </span>
+
+      </div>
+
+
+      <h3>
+        AI Fitness & Health Solution
+      </h3>
+
+      <p>
+        Worked with a team on an AI-based fitness and health
+        concept focused on encouraging fitness activities and
+        making healthier habits easier to follow.
+      </p>
+
+
+      <div class="sih-circle">
+        SIH
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="section" id="contact">
+
+  <div class="section-label">
+    07 / CONTACT
+  </div>
+
+  <div class="section-content contact">
+
+    <h2>
+      Let's make something
+      <em>interesting.</em>
+    </h2>
+
+
+    <a
+      class="email-big"
+      href="mailto:snehajaiswal0854@gmail.com"
+    >
+      snehajaiswal0854@gmail.com ↗
+    </a>
+
+
+    <div class="contact-links">
+
+      <a
+        href="https://github.com/snehajaiswal0854-ux"
+        target="_blank"
+      >
+        GitHub ↗
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/sneha-j-6964663a0"
+        target="_blank"
+      >
+        LinkedIn ↗
+      </a>
+
+      <a
+        href="mailto:snehajaiswal0854@gmail.com"
+      >
+        Email ↗
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <span>
+    © 2026 Sneha Jaiswal
+  </span>
+
+  <span>
+    Built with curiosity & caffeine.
+  </span>
+
+  <span>
+    SJ / 08
+  </span>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+  const menuButton =
+    document.getElementById("menuButton");
+
+  const menu =
+    document.getElementById("menu");
+
+
+  menuButton.addEventListener("click", function () {
+
+    menu.classList.toggle("active");
+
+  });
+
+
+  /* Close menu after clicking a section */
+
+  const links =
+    menu.querySelectorAll("a");
+
+
+  links.forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+      menu.classList.remove("active");
+
+    });
+
+  });
+
+
+  /* Close menu when clicking outside */
+
+  document.addEventListener("click", function(event) {
+
+    if (
+      !menu.contains(event.target) &&
+      !menuButton.contains(event.target)
+    ) {
+
+      menu.classList.remove("active");
+
+    }
+
+  });
+
+</script>
+
+</body>
+</html>
